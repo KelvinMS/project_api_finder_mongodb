@@ -1,9 +1,9 @@
 const mongoose = require ("mongoose");
 
+//Informa o schema que será utilizado.
 const Test = mongoose.model("Test");
 
 module.exports = {
-
     //await é valido apenas em funções async
     async searchAll(req, res) {
         const tests = await Test.find();
@@ -29,5 +29,4 @@ module.exports = {
         const tests = await Test.findByIdAndRemove(req.params.id);
         return res.send();
     }
-
 };

@@ -35,4 +35,6 @@ const SchemaTest = mongoose.Schema({
 
 });
 
-mongoose.model("Test", SchemaTest,"log"); // Terceiro parametro mostra a collection que vai ser acessada
+//Cria o model Test, que vai seguir o esquema SchemaTest, criado a cima
+//Um terceiro parametro do mongoose.model indica o nome da collection a ser acessada
+mongoose.model("Test", SchemaTest,"log"); 
